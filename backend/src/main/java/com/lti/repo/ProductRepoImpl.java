@@ -16,25 +16,25 @@ import com.lti.entity.Product;
 @Repository
 public class ProductRepoImpl implements ProductRepo{
 	
+
 	@PersistenceContext
 	private EntityManager em;
-
+	
 	@Override
 	public void save(Product prod) {
-		// TODO Auto-generated method stub
+		
 		em.persist(prod);
 	}
 
 	@Override
-	public Product fetch(String pname) {
-		// TODO Auto-generated method stub
-		return em.find(Product.class, pname);
+	public Product fetch(int pId) {
+		
+		return em.find(Product.class, pId);
 	}
 
 	@Override
 	public List<Product> list() {
-		// TODO Auto-generated method stub
-		return (List<Product>)em.createQuery("from product").getResultList();
+		return em.createQuery("from Product").getResultList();
 	}
 
 }

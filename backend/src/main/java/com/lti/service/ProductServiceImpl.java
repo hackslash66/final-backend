@@ -11,6 +11,12 @@ import org.springframework.stereotype.Service;
 import com.lti.entity.Product;
 import com.lti.repo.ProductRepo;
 
+/**
+ * 
+ * @author Surya
+ *
+ */
+
 @Service
 public class ProductServiceImpl implements ProductService {
 
@@ -29,7 +35,7 @@ public class ProductServiceImpl implements ProductService {
 	}
 
 	@Override
-	public Product find(String pname) {
-		return repo.fetch(pname);
+	public Product find(int pId) {
+		return repo.fetch(pId);
 	}
 }

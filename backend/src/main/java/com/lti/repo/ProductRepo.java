@@ -11,7 +11,7 @@ import com.lti.entity.Product;
 public interface ProductRepo {
 void save(Product prod);
 	
-	Product fetch(String pname);
+	Product fetch(int pId);
 	
 	List<Product> list();
 }
