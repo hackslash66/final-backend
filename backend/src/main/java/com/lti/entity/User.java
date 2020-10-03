@@ -12,6 +12,8 @@ import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 
 
 /**
@@ -61,6 +63,7 @@ public class User {
 	private String status;
 
 	@OneToMany(mappedBy = "user", cascade = { CascadeType.ALL }, fetch = FetchType.EAGER)
+	@JsonIgnore
 	private List<Order> ord = new ArrayList<Order>();
 
 	public String getUname() {

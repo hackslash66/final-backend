@@ -30,9 +30,7 @@ public class OrderServiceImpl implements OrderService {
 		
 		List<Order> res=repo.list(uname);
 
-		for (Order order : res) {
-			System.out.println(order.getProd().getPname()+" "+order.getUser().getName());
-		}
+		
 		
 		return res;
 	}

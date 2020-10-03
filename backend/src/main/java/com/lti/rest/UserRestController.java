@@ -29,7 +29,9 @@ public class UserRestController {
 	@Autowired
 	private UserService service;
 	@PostMapping(value = "/add", consumes = "application/json")
-	public String addUser(@RequestBody User user) {
+	public String addUser(@RequestBody User user)
+	{
+		
 		service.persist(user);
 		return "User added successfully";
 	}
@@ -40,12 +42,12 @@ public class UserRestController {
 	}
 	
 	@GetMapping(value = "/list", produces = "application/json")
-	public List<User> listEmployee(){
+	public List<User> listUser(){
 		return service.load();
 	}
 	
 	@PutMapping(value = "/edit", consumes = "application/json")
-	public String updateEmployee(@RequestBody User user) {
+	public String updateUser(@RequestBody User user) {
 		service.edit(user);
 		return "Employee updated successfully";
 	}
