@@ -36,7 +36,7 @@ private EntityManagerFactory factory;
 		Order o=new Order();
 		o.setO_id(10);
 		o.setUser(u1);
-		o.setProd(p1);
+		o.setProduct(p1);
 		
 		em.persist(o);
 		txn.commit();
