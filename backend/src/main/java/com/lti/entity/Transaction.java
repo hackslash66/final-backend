@@ -8,6 +8,12 @@ import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
+/**
+ * @author Yashwanth
+ *
+ * @version 1.8
+ */
+
 @Entity
 @Table(name = "transactions")
 @SequenceGenerator(name = "transseq", sequenceName = "seq_trans", initialValue = 1001, allocationSize = 1)

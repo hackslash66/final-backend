@@ -50,7 +50,7 @@ public class User {
 	@Column(name = "ifsc",length=15)
 	private String ifsc;
 	
-	@Column(name = "address",length=15)
+	@Column(name = "address",length=40)
 	private String address;
 	
 	@Column(name = "bank",length=15)

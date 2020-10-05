@@ -9,6 +9,7 @@ import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
@@ -21,27 +22,29 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "emi_card")
+@NamedQuery(name = "carddetails", query = "FROM EMICard WHERE cardNo=:cardNo")
 public class EMICard {
 	
 	@Id
-	@Column(name = "reg_no", length = 16)
+	@Column(name = "cardNo", length = 16)
 	private String cardNo;
 	
-	@Column(name = "issue_date", length = 20)
+	@Column(name = "issueDate", length = 20)
 	private String issueDate;
 	
-	@Column(name = "expiry_date", length = 20)
+	@Column(name = "expiryDate", length = 20)
 	private String expiryDate;
 	
-	@Column(name = "emi_limit", length = 20)
-	private double emiLimit;
-
-	@OneToOne
+	@Column(name = "balance", length = 20)
+	private double balance;
+	
+	
+	@OneToOne(cascade = {CascadeType.ALL})
 	@JoinColumn(name = "uname")
 	private User user;
-//	@OneToMany(cascade = {CascadeType.ALL},fetch = FetchType.EAGER)
-//	private List<Product> products = new ArrayList<Product>();
 
+	
+     
 
 
 	public void setCardNo(String cardNo) {
@@ -69,34 +72,51 @@ public class EMICard {
 	}
 
 
-//	public User getU() {
-//		return u;
-//	}
-//
-//
-//	public void setU(User u) {
-//		this.u = u;
-//	}
-
-
-//	public List<Product> getProducts() {
-//		return products;
-//	}
-//
-//
-//	public void setProducts(List<Product> products) {
-//		this.products = products;
-//	}
-
-
-	public double getEmilimit() {
-		return emiLimit;
+	public String getIssueDate() {
+		return issueDate;
 	}
 
 
-	public void setEmilimit(double emilimit) {
-		this.emiLimit = emilimit;
+	public void setIssueDate(String issueDate) {
+		this.issueDate = issueDate;
 	}
 
 
+	public String getExpiryDate() {
+		return expiryDate;
+	}
+
+
+	public void setExpiryDate(String expiryDate) {
+		this.expiryDate = expiryDate;
+	}
+
+
+	public double getBalance() {
+		return balance;
+	}
+
+
+	public void setBalance(double balance) {
+		this.balance = balance;
+	}
+
+
+	public User getUser() {
+		return user;
+	}
+
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+
+
+	public String getCardNo() {
+		return cardNo;
+	}
+
+
+    
+	
 }

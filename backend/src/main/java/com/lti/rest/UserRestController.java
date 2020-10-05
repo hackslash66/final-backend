@@ -29,6 +29,8 @@ public class UserRestController {
 	@Autowired
 	private UserService service;
 	@PostMapping(value = "/add", consumes = "application/json")
+	
+	
 	public String addUser(@RequestBody User user)
 	{
 		
