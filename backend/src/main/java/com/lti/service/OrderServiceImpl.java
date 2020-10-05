@@ -2,6 +2,9 @@ package com.lti.service;
 
 import java.util.List;
 
+import javax.transaction.Transactional;
+import javax.transaction.Transactional.TxType;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -33,6 +36,14 @@ public class OrderServiceImpl implements OrderService {
 		
 		
 		return res;
+	}
+
+	@Override
+	@Transactional(value = TxType.REQUIRED)
+	public void edit(Order ord) {
+		// TODO Auto-generated method stub
+		repo.update(ord);
+		
 	}
 
 }

@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 @Table(name = "users")
-@NamedQuery(name = "login", query = "FROM User WHERE uname=:username AND password=:password")
+@NamedQuery(name = "login", query = "FROM User WHERE uname=:username AND password=:password AND status=:status")
 @NamedQuery(name = "fetchifyes", query = "select u from User u where u.status=:status")
 public class User {
 	

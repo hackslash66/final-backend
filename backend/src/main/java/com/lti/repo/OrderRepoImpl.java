@@ -44,4 +44,10 @@ private JdbcTemplate jdbcTemp;
 		return orders;	
 	}
 
+	@Override
+	public void update(Order ord) {
+		// TODO Auto-generated method stub
+		em.merge(ord);
+	}
+
 }

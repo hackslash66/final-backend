@@ -71,6 +71,7 @@ public class UserRepoImpl implements UserRepo{
 		System.out.println(login.getPwd());
 		query.setParameter("username", login.getUname());
 		query.setParameter("password", login.getPwd());
+		query.setParameter("status", "accepted");
 		return (User) query.getSingleResult();
 	}
 }

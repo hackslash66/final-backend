@@ -29,11 +29,11 @@ public class Order {
 	@GeneratedValue(generator = "ordseq", strategy = GenerationType.SEQUENCE)
 	private int orderID;
 	
-	@Column(name = "Order_date")
+	@Column(name = "Order_date",length=15)
 	private String orderDate;
 	
 	@Column(name = "emi_duration")
-	private String emiDuration;
+	private int emiDuration;
 	
 	@ManyToOne
 	@JoinColumn(name = "uname")
@@ -51,43 +51,57 @@ public class Order {
 	private String producturl;
 	
 	@Column(name = "amountPaid")
-	private String amountPaid;
+	private double amountPaid;
 	
 	@Column(name = "dueAmount")
-	private String dueAmount;
+	private double dueAmount;
 	
 	@Column(name = "monthsLeft")
-	private String monthsLeft;
+	private int monthsLeft;
 	
-
+    
+	@Column(name = "recentDate",length=15)
+    private String recentDate;
 	
+	
+	
+	
+	public String getRecentDate() {
+		return recentDate;
+	}
 
-	public String getAmountPaid() {
+
+	public void setRecentDate(String recentDate) {
+		this.recentDate = recentDate;
+	}
+
+
+	public double getAmountPaid() {
 		return amountPaid;
 	}
 
 
-	public void setAmountPaid(String amountPaid) {
+	public void setAmountPaid(double amountPaid) {
 		this.amountPaid = amountPaid;
 	}
 
 
-	public String getDueAmount() {
+	public double getDueAmount() {
 		return dueAmount;
 	}
 
 
-	public void setDueAmount(String dueAmount) {
+	public void setDueAmount(double dueAmount) {
 		this.dueAmount = dueAmount;
 	}
 
 
-	public String getMonthsLeft() {
+	public int getMonthsLeft() {
 		return monthsLeft;
 	}
 
 
-	public void setMonthsLeft(String monthsLeft) {
+	public void setMonthsLeft(int monthsLeft) {
 		this.monthsLeft = monthsLeft;
 	}
 
@@ -157,16 +171,13 @@ public class Order {
 	}
 
 
-	
 
-	
-
-	public String getEmiDuration() {
+	public int getEmiDuration() {
 		return emiDuration;
 	}
 
 
-	public void setEmiDuration(String emiDuration) {
+	public void setEmiDuration(int emiDuration) {
 		this.emiDuration = emiDuration;
 	}
 

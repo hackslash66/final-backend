@@ -33,13 +33,13 @@ public class Product {
 	private int pId;
 	
 	@Column(name="pname",length = 30)
-	private String pName;
+	private String pname;
 	
 	@Column(name="pdes",length = 200)
-	private String pDetails;
+	private String pdes;
 	
 	@Column(name="prate")
-	private double pRate;
+	private double prate;
 
 	public int getpId() {
 		return pId;
@@ -49,31 +49,31 @@ public class Product {
 		this.pId = pId;
 	}
 
-	public String getpName() {
-		return pName;
+	public String getPname() {
+		return pname;
 	}
 
-	public void setpName(String pName) {
-		this.pName = pName;
+	public void setPname(String pname) {
+		this.pname = pname;
 	}
 
-	public String getpDetails() {
-		return pDetails;
+	public String getPdes() {
+		return pdes;
 	}
 
-	public void setpDetails(String pDetails) {
-		this.pDetails = pDetails;
+	public void setPdes(String pdes) {
+		this.pdes = pdes;
 	}
 
-	public double getpRate() {
-		return pRate;
+	public double getPrate() {
+		return prate;
 	}
 
-	public void setpRate(double pRate) {
-		this.pRate = pRate;
+	public void setPrate(double prate) {
+		this.prate = prate;
 	}
-	
-	
+
+    
 	
 	
 	
