@@ -15,7 +15,7 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 /**
- * @author surya
+ * @author Yashwanth
  *
  * @version 1.8
  */
