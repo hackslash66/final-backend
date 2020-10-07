@@ -48,6 +48,12 @@ public class UserRestController {
 		return service.load();
 	}
 	
+	@GetMapping(value = "/acceptedusers", produces = "application/json")
+	public List<User> listAccUser(){
+		return service.loadIfAcc();
+	}
+	
+	
 	@PutMapping(value = "/edit", consumes = "application/json")
 	public String updateUser(@RequestBody User user) {
 		service.edit(user);

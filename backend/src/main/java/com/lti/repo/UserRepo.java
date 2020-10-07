@@ -21,9 +21,11 @@ void save(User user);
 	
 	User verifyLogin(Login login);
 	
-	List<User> fetchIfYes();
+	List<User> fetchIfAcc();
 	
 	List<User> fetchAll();
 	
 	User forgotpassword(String uname, String email) ;
+	
+	
 }

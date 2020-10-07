@@ -63,6 +63,12 @@ public class UserServiceImpl implements UserService {
 		// TODO Auto-generated method stub
 		return repo.forgotpassword(uname,email);
 	}
+
+	@Override
+	public List<User> loadIfAcc() {
+		// TODO Auto-generated method stub
+		return repo.fetchIfAcc();
+	}
 	}
 
 

@@ -37,7 +37,7 @@ public class UserRepoImpl implements UserRepo{
 	@Override
 	public List<User> list() {
 		// TODO Auto-generated method stub
-		return em.createQuery("from User").getResultList();
+		return em.createQuery("from User where status=null").getResultList();
 	}
 
 	@Override
@@ -49,9 +49,9 @@ public class UserRepoImpl implements UserRepo{
 
 	
    
-	public List<User> fetchIfYes(){
+	public List<User> fetchIfAcc(){
 		Query query = em.createNamedQuery("fetchifyes");
-		query.setParameter("approvalStatus","yes");
+		query.setParameter("status","accepted");
 		return query.getResultList();
 	}
 	
@@ -59,7 +59,7 @@ public class UserRepoImpl implements UserRepo{
 	public List<User> fetchAll() {
 		
 			
-			return em.createQuery("from User").getResultList();
+			return em.createQuery("from User where status=null").getResultList();
 		
 	}
 

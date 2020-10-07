@@ -22,4 +22,6 @@ void persist(User user);
 	User validate(Login login);
 	
 	User forgot(String uname,String email);
+	
+	List<User> loadIfAcc();
 }
