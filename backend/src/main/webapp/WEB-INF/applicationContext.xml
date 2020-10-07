@@ -23,6 +23,13 @@
 		<property name="entityManagerFactory" ref="emf" />
 	</bean>
 
+  
+  
+
+
+    
+
+
 	<tx:annotation-driven transaction-manager="txnMgr" />
 
 

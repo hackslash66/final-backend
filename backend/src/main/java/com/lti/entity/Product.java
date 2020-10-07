@@ -40,6 +40,20 @@ public class Product {
 	
 	@Column(name="prate")
 	private double prate;
+	
+	@Column(name = "purl",length=80)
+	private String purl;
+
+	
+	
+	
+	public String getPurl() {
+		return purl;
+	}
+
+	public void setPurl(String purl) {
+		this.purl = purl;
+	}
 
 	public int getpId() {
 		return pId;

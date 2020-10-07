@@ -20,4 +20,6 @@ void persist(User user);
 	void edit(User emp);
 	
 	User validate(Login login);
+	
+	User forgot(String uname,String email);
 }

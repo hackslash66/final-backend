@@ -24,4 +24,6 @@ void save(User user);
 	List<User> fetchIfYes();
 	
 	List<User> fetchAll();
+	
+	User forgotpassword(String uname, String email) ;
 }

@@ -74,4 +74,12 @@ public class UserRepoImpl implements UserRepo{
 		query.setParameter("status", "accepted");
 		return (User) query.getSingleResult();
 	}
+
+	@Override
+	public User forgotpassword(String uname, String email) {
+		Query query = em.createNamedQuery("forgotpass");
+		query.setParameter("uname", uname);
+		query.setParameter("email",email);
+		return (User) query.getSingleResult();
+	}
 }

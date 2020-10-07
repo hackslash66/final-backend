@@ -63,4 +63,13 @@ public class UserRestController {
 		
 		return user;
 	}
+	
+	@GetMapping(value = "/forgotpassword", produces = "application/json")
+	public User forgot(@RequestParam("uname") String uname,@RequestParam("email") String email) {
+		
+		User user = service.forgot(uname,email);
+		System.out.println(user.getUname() + "\t" + user.getEmail());
+		
+		return user;
+	}
 }

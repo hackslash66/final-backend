@@ -57,6 +57,12 @@ public class UserServiceImpl implements UserService {
 		
 		return repo.verifyLogin(login);
 		}
+
+	@Override
+	public User forgot(String uname, String email) {
+		// TODO Auto-generated method stub
+		return repo.forgotpassword(uname,email);
+	}
 	}
 
 

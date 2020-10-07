@@ -44,11 +44,6 @@ public class Order {
 	@JoinColumn(name = "pId")
 	private Product product;
 
-	@Column(name = "productname",length=50)
-	private String productname;
-	
-	@Column(name = "producturl",length=80)
-	private String producturl;
 	
 	@Column(name = "amountPaid")
 	private double amountPaid;
@@ -106,25 +101,7 @@ public class Order {
 	}
 
 
-	public String getProductname() {
-		return productname;
-	}
-
-
-	public void setProductname(String productname) {
-		this.productname = productname;
-	}
-
-
-	public String getProducturl() {
-		return producturl;
-	}
-
-
-	public void setProducturl(String producturl) {
-		this.producturl = producturl;
-	}
-
+	
 
 	
 
